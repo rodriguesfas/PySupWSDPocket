@@ -12,6 +12,24 @@ If you don't specify the model, the program will load the default one: ```semcor
 
     pip install pysupwsdpocket
 
+    or
+
+    pip install pysupwsdpocket -U
+
+# Install Model Language
+[Download](https://supwsd.net/supwsd/downloads.jsp) the templates to the path: ```/home/your_user/pysupwsdpocket_models```
+
+# Links Models
+- EN: https://helsinkifi-my.sharepoint.com/:u:/g/personal/raganato_ad_helsinki_fi/EcISNoRjksJHgSY3hqcdsfAB-dQ3aVlC9Zs-Ppu3S24rSw?e=HzWRaD
+
+- FR: https://helsinkifi-my.sharepoint.com/:u:/g/personal/raganato_ad_helsinki_fi/ERRz3CFpQVZOneka0NiXbQMB6J24LgxDgk04xQs9iX8t7w?e=JLRnwO
+
+- DE: https://helsinkifi-my.sharepoint.com/:u:/g/personal/raganato_ad_helsinki_fi/ER1Gag9eBWVCsc5kDSYozgMBklegV74loBGZkqaQih9agQ?e=6Pvr2s
+
+- IT: https://helsinkifi-my.sharepoint.com/:u:/g/personal/raganato_ad_helsinki_fi/EXUBDfiS5bxLqMBdDs4p3VwBE5PFdCaHJRdpE-8rGkGbRQ?e=YK9sEc
+
+- ES: https://helsinkifi-my.sharepoint.com/:u:/g/personal/raganato_ad_helsinki_fi/EZRL8t0uqXBJqh60dPQXFskBJAAYUkDTBMl_P3RrL9NLXA?e=BY05hK
+
 # Guide Start
 ```example.py```
 
@@ -32,7 +50,7 @@ print(doc)
 ```pysupwsd -wsd <sentence|dataset> <lang> <model>```
 
 ```shell
-pysupwsd -wsd 'The human brain is quite proficient at word-sense disambiguation.' en semcor_omsti
+pysupwsdpocket -wsd 'The human brain is quite proficient at word-sense disambiguation.' en semcor_omsti
 ```
 
 # Credits

@@ -4,5 +4,5 @@ __pycache__
 
 build/*
 dist/*
-pysupwsdpocket_env/*
+pysupwsdpocket_env_tests/*
 pysupwsdpocket.egg-info/*

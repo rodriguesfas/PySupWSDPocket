@@ -17,24 +17,24 @@ def wsd(raw_text, lang, model):
         return doc
     else:
         print("Wrong command!")
-        print("Try the command: pysupwsd --wsd [sentence|corpus] [lang] [model]")
+        print("Try the command: pysupwsdpocket --wsd [sentence|corpus] [lang] [model]")
 
-def install(args):
-    if args:
-        PySupWSDPocket().install(args)
+def install(model):
+    if model:
+        PySupWSDPocket().install(model)
     else:
         print("Wrong command!")
-        print("Try the command: pysupwsd --install [model]")
+        print("Try the command: pysupwsdpocket --install [model]")
 
 def main():
     my_parser = argparse.ArgumentParser(
-        prog="pysupwsd",
+        prog="pysupwsdpocket",
         description="Just a Python Version of SupWSD Pocket: A software suite for SUPervised Word Sense Disambiguation."
     )
 
     version_file_contents = open(path.join(HERE, '_version.py'), encoding='utf-8').read()
     VERSION = re.compile('__version__ = \"(.*)\"').search(version_file_contents).group(1)
-    my_parser.version = 'PySupWSDPocket V' + VERSION
+    my_parser.version = 'PySupWSDPocket V-' + VERSION
 
     my_parser.add_argument('-v', '--version',
                            help='Show version.',
@@ -45,7 +45,19 @@ def main():
                         type=wsd,
                         action='store')
 
-    raw_text, lang, model = my_parser.parse_args()
+    my_parser.add_argument('-install', '--install',
+                        help="Install Model Language.",
+                        type=install,
+                        action='store')
+
+    try:
+        raw_text, lang, model = my_parser.parse_args()
+    except Exception as error:
+        pass
+    else:
+        model = my_parser.parse_args()
+    finally:
+        pass
 
 if __name__ == '__main__':
     main()

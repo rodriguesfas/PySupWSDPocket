@@ -72,14 +72,14 @@ setup(
         (HOME+'/pysupwsdpocket_models', []),
     ],
 
-    install_requires=['homura==0.1.5'],
+    install_requires=['homura'],
 
     # List required Python versions.
-    python_requires='>=3',
+    python_requires='>=3.7',
 
     entry_points={
         "console_scripts": [
-            "pysupwsdpocket=pysupwsd.__main__:main"
+            "pysupwsdpocket=pysupwsdpocket.__main__:main"
         ]
     }
 
