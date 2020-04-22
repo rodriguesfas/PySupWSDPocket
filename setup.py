@@ -67,12 +67,14 @@ setup(
 
     include_package_data=True,
 
+    package_data = {'pysupwsdpocket': ['supwsd-pocket.jar']},
+
     # Create dir.
     data_files=[
         (HOME+'/pysupwsdpocket_models', []),
     ],
 
-    install_requires=['homura'],
+    install_requires=[],
 
     # List required Python versions.
     python_requires='>=3.7',

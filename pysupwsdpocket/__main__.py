@@ -24,7 +24,7 @@ def main():
         description="Just a Python Version of SupWSD Pocket: A software suite for SUPervised Word Sense Disambiguation."
     )
 
-    version_file_contents = open(path.join(HERE+'/pysupwsdpocket/', '_version.py'), encoding='utf-8').read()
+    version_file_contents = open(path.join(HERE, '_version.py'), encoding='utf-8').read()
     VERSION = re.compile('__version__ = \"(.*)\"').search(version_file_contents).group(1)
     parser.version = 'PySupWSDPocket V-' + VERSION
 
