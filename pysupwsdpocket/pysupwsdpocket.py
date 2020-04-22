@@ -16,13 +16,14 @@ class PySupWSDPocket(object):
     def wsd(self, raw_text):
         HERE = path.abspath(path.dirname(__file__))
         JAR_FILE = HERE+'/supwsd-pocket.jar'
-        workspace = self.HOME + '/pysupwsdpocket_models'
+        WORKSPACE = self.HOME + '/pysupwsdpocket_models'
 
-        args = [raw_text, self.lang, self.model, workspace]
+        args = [raw_text, self.lang, self.model, WORKSPACE]
 
         try:
-            annotation = subprocess.check_output(['java', '-jar', JAR_FILE, *args], shell=False)
-            return annotation
+            doc = subprocess.check_output(['java', '-jar', JAR_FILE, *args], shell=False)
+            doc = doc.decode("utf-8")
+            return doc
         except Exception as err:
             return err
 
