@@ -2,8 +2,7 @@
 
 __pycache__
 
-de.zip
-en.zip
-es.zip
-fr.zip
-it.zip
+build/*
+dist/*
+pysupwsdpocket_env/*
+pysupwsdpocket.egg-info/*

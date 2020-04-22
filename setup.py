@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os
-import re
+
+import os, re
 
 from os import path
 from codecs import open
@@ -68,12 +68,14 @@ setup(
     include_package_data=True,
 
     # Create dir.
-    data_files=[],
+    data_files=[
+        (HOME+'/pysupwsdpocket_models', []),
+    ],
 
-    install_requires=[],
+    install_requires=['homura==0.1.5'],
 
     # List required Python versions.
-    python_requires='>=3.7',
+    python_requires='>=3',
 
     entry_points={
         "console_scripts": [

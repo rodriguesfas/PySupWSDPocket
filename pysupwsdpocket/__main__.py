@@ -17,7 +17,14 @@ def wsd(raw_text, lang, model):
         return doc
     else:
         print("Wrong command!")
-        print("Try the command: pysupwsd -run <sentence|corpus> <lang> <model>")
+        print("Try the command: pysupwsd --wsd [sentence|corpus] [lang] [model]")
+
+def install(args):
+    if args:
+        PySupWSDPocket().install(args)
+    else:
+        print("Wrong command!")
+        print("Try the command: pysupwsd --install [model]")
 
 def main():
     my_parser = argparse.ArgumentParser(
