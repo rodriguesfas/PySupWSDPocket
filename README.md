@@ -17,7 +17,7 @@ If you don't specify the model, the program will load the default one: ```semcor
     pip install pysupwsdpocket -U
 
 # Install Model Language
-[Download](https://supwsd.net/supwsd/downloads.jsp) the templates to the path: ```/home/your_user/pysupwsdpocket_models```
+[Download](https://supwsd.net/supwsd/downloads.jsp) the SupWSD Pocket models to the path: ```/home/your_user/pysupwsdpocket_models```
 
 # Guide Start
 ```example.py```
