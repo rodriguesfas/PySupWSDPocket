@@ -77,7 +77,7 @@ setup(
     install_requires=[],
 
     # List required Python versions.
-    python_requires='>=3.7',
+    python_requires='>=3.6',
 
     entry_points={
         "console_scripts": [
