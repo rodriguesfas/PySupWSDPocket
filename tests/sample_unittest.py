@@ -14,7 +14,6 @@ class TestBoostPathosUnittest(unittest.TestCase):
     def main(self):
         nlp = PySupWSDPocket(lang='en', model='semcor_omsti')
         doc = nlp.wsd(raw_text=self.sentence)
-        
         self.assertEqual(doc, self.expected_out, "Err output!")
 
 if __name__ == "__main__":
