@@ -13,6 +13,22 @@ class PySupWSDPocket(object):
 
         self.HOME = os.environ['HOME']
 
+    def parse_corpus(self, corpus_path):
+        HERE = path.abspath(path.dirname(__file__))
+        JAR_FILE = HERE+'/supwsd-pocket.jar'
+        WORKSPACE = self.HOME + '/pysupwsdpocket_models'
+
+        args = [corpus_path, self.lang, self.model, WORKSPACE]
+
+        try:
+            json_raw = subprocess.check_output(['java', '-jar', JAR_FILE, *args], shell=False).decode("utf-8")
+            json_docs = json_raw.split("\n\n")
+            docs = []
+            for json_doc in json_docs:
+                yield Document(json_doc)
+        except Exception as err:
+            return err
+
     def wsd(self, raw_text):
         HERE = path.abspath(path.dirname(__file__))
         JAR_FILE = HERE+'/supwsd-pocket.jar'
