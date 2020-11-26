@@ -19,9 +19,8 @@ class PySupWSDPocket(object):
     def parse_corpus(self, corpus_path):
         HERE = path.abspath(path.dirname(__file__))
         JAR_FILE = HERE+'/supwsd-pocket.jar'
-        WORKSPACE = self.HOME + '/pysupwsdpocket_models'
 
-        args = [corpus_path, self.lang, self.model, WORKSPACE]
+        args = [corpus_path, self.lang, self.model, self.WORKSPACE]
 
         try:
             json_raw = subprocess.check_output(['java', '-jar', JAR_FILE, *args], shell=False).decode("utf-8")
